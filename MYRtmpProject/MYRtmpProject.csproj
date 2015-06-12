@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E06AE1F2-8AF4-45AC-AB00-5EA38FA4928F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MYRtmpProject</RootNamespace>
+    <AssemblyName>MYRtmpProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJson">
+      <HintPath>.\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="myFluorineFx\Invocation\IInvocationCallback.cs" />
+    <Compile Include="myFluorineFx\Invocation\IInvocationManager.cs" />
+    <Compile Include="myFluorineFx\Invocation\IInvocationResultHandler.cs" />
+    <Compile Include="myFluorineFx\Invocation\InvocationHandler.cs" />
+    <Compile Include="myFluorineFx\Invocation\InvocationManager.cs" />
+    <Compile Include="myFluorineFx\AMF3\ArrayCollection.cs" />
+    <Compile Include="myFluorineFx\AMF3\ByteArray.cs" />
+    <Compile Include="myFluorineFx\AMF3\ClassDefinition.cs" />
+    <Compile Include="myFluorineFx\AMF3\DataInput.cs" />
+    <Compile Include="myFluorineFx\AMF3\DataOutput.cs" />
+    <Compile Include="myFluorineFx\AMF3\IDataInput.cs" />
+    <Compile Include="myFluorineFx\AMF3\IDataOutput.cs" />
+    <Compile Include="myFluorineFx\AMF3\IExternalizable.cs" />
+    <Compile Include="myFluorineFx\AMF3\ObjectProxy.cs" />
+    <Compile Include="myFluorineFx\ASObject.cs" />
+    <Compile Include="myFluorineFx\Collections\Generic\CopyOnWriteArray.cs" />
+    <Compile Include="myFluorineFx\Collections\Generic\CopyOnWriteArraySet.cs" />
+    <Compile Include="myFluorineFx\Configuration\ApplicationConfiguration.cs" />
+    <Compile Include="myFluorineFx\Configuration\CacheMap.cs" />
+    <Compile Include="myFluorineFx\Configuration\FluorineConfiguration.cs" />
+    <Compile Include="myFluorineFx\Configuration\FluorineSettings.cs" />
+    <Compile Include="myFluorineFx\Configuration\XmlConfigurator.cs" />
+    <Compile Include="myFluorineFx\Constants.cs" />
+    <Compile Include="myFluorineFx\Context\FileSystemResource.cs" />
+    <Compile Include="myFluorineFx\Context\FluorineContext.cs" />
+    <Compile Include="myFluorineFx\Context\FluorineRtmpContext.cs" />
+    <Compile Include="myFluorineFx\Context\FluorineWebContext.cs" />
+    <Compile Include="myFluorineFx\Context\HttpApplicationStateWrapper.cs" />
+    <Compile Include="myFluorineFx\Context\HttpSessionStateWrapper.cs" />
+    <Compile Include="myFluorineFx\Context\IApplicationState.cs" />
+    <Compile Include="myFluorineFx\Context\IResource.cs" />
+    <Compile Include="myFluorineFx\Context\ISessionListener.cs" />
+    <Compile Include="myFluorineFx\Context\ISessionState.cs" />
+    <Compile Include="myFluorineFx\Context\RtmpApplicationState.cs" />
+    <Compile Include="myFluorineFx\Context\WebSafeCallContext.cs" />
+    <Compile Include="myFluorineFx\Context\_TimeoutContext.cs" />
+    <Compile Include="myFluorineFx\Exceptions\ClientRejectedException.cs" />
+    <Compile Include="myFluorineFx\Exceptions\FluorineException.cs" />
+    <Compile Include="myFluorineFx\Exceptions\IllegalStateException.cs" />
+    <Compile Include="myFluorineFx\Exceptions\ProtocolException.cs" />
+    <Compile Include="myFluorineFx\Exceptions\ServiceNotFoundException.cs" />
+    <Compile Include="myFluorineFx\Exceptions\UnexpectedAMF.cs" />
+    <Compile Include="myFluorineFx\IO\AMFBody.cs" />
+    <Compile Include="myFluorineFx\IO\AMFDeserializer.cs" />
+    <Compile Include="myFluorineFx\IO\AMFHeader.cs" />
+    <Compile Include="myFluorineFx\IO\AMFMessage.cs" />
+    <Compile Include="myFluorineFx\IO\AMFReader.cs" />
+    <Compile Include="myFluorineFx\IO\AMFSerializer.cs" />
+    <Compile Include="myFluorineFx\IO\AMFWriter.cs" />
+    <Compile Include="myFluorineFx\IO\CacheableObject.cs" />
+    <Compile Include="myFluorineFx\IO\CachedBody.cs" />
+    <Compile Include="myFluorineFx\IO\ErrorResponseBody.cs" />
+    <Compile Include="myFluorineFx\IO\IKeyFrameDataAnalyzer.cs" />
+    <Compile Include="myFluorineFx\IO\IOConstants.cs" />
+    <Compile Include="myFluorineFx\IO\IStreamableFile.cs" />
+    <Compile Include="myFluorineFx\IO\ITag.cs" />
+    <Compile Include="myFluorineFx\IO\ITagReader.cs" />
+    <Compile Include="myFluorineFx\IO\ITagWriter.cs" />
+    <Compile Include="myFluorineFx\IO\KeyFrameMeta.cs" />
+    <Compile Include="myFluorineFx\IO\MessageOutput.cs" />
+    <Compile Include="myFluorineFx\IO\RawBinary.cs" />
+    <Compile Include="myFluorineFx\IO\ResponseBody.cs" />
+    <Compile Include="myFluorineFx\IO\Tag.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0AMF3TagWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0ArrayWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0ASObjectWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0BooleanWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0CacheResultWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0CharWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0DataSetWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0DataTableWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0DateTimeWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0DBNullWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0EnumWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0GuidWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0NameObjectCollectionWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0NullWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0NumberWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0ObjectWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0SqlTypesWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0StringWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0XDocumentWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0XElementWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF0\AMF0XmlDocumentWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3ArrayWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3ASObjectWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3BooleanWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3ByteArrayWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3CacheResultWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3CharWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3DataSetWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3DataTableWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3DateTimeWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3DBNullWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3DoubleWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3EnumWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3GuidWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3IntWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3NameObjectCollectionWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3ObjectWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3SqlTypesWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3StringWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3XDocumentWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3XElementWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\AMF3\AMF3XmlDocumentWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\IAMFWriter.cs" />
+    <Compile Include="myFluorineFx\IO\Writers\RawBinaryWriter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\BasicScopeEnumerator.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Constants.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Event\IEvent.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Event\IEventDispatcher.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Event\IEventListener.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IAttributeStore.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IBandwidthConfigure.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IBasicScope.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IBWControllable.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IClient.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IClientRegistry.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IConnection.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IConnectionBWConfig.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\ICoreObject.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IGlobalScope.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IMessageClient.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IMessageClientListener.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IMessageConnection.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IScope.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IScopeAware.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IScopeContext.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IScopeHandler.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IScopeResolver.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IScopeService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IServiceCapableConnection.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\IServiceContainer.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\ScopeNotFoundException.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\ScopeShuttingDownException.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\ServiceContainer.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Service\IPendingServiceCall.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Service\IPendingServiceCallback.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Service\IServiceCall.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Service\IServiceInvoker.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Service\ServiceUtils.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\SO\ISharedObject.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\SO\ISharedObjectListener.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\SO\ISharedObjectSecurity.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\SO\ISharedObjectSecurityService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\SO\ISharedObjectService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IBroadcastStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IClientBroadcastStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IClientStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IPlayItem.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IPlaylist.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IPlaylistController.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IPlaylistSubscriberStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IServerStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\ISingleItemSubscriberStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IStreamAwareScopeHandler.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IStreamCapableConnection.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IStreamCodecInfo.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IStreamFilenameGenerator.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IStreamListener.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IStreamPacket.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IStreamPlaybackSecurity.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IStreamPublishSecurity.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IStreamSecurityService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IStreamService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\ISubscriberStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\IVideoStreamCodec.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\Support\DenyAllStreamAccess.cs" />
+    <Compile Include="myFluorineFx\Messaging\Api\Stream\Support\SimplePlayItem.cs" />
+    <Compile Include="myFluorineFx\Messaging\AttributeStore.cs" />
+    <Compile Include="myFluorineFx\Messaging\BaseConnection.cs" />
+    <Compile Include="myFluorineFx\Messaging\BasicScope.cs" />
+    <Compile Include="myFluorineFx\Messaging\Client.cs" />
+    <Compile Include="myFluorineFx\Messaging\ClientManager.cs" />
+    <Compile Include="myFluorineFx\Messaging\Config\AdapterSettings.cs" />
+    <Compile Include="myFluorineFx\Messaging\Config\ChannelSettings.cs" />
+    <Compile Include="myFluorineFx\Messaging\Config\DestinationSettings.cs" />
+    <Compile Include="myFluorineFx\Messaging\Config\FactorySettings.cs" />
+    <Compile Include="myFluorineFx\Messaging\Config\FlexClientSettings.cs" />
+    <Compile Include="myFluorineFx\Messaging\Config\MetadataSettings.cs" />
+    <Compile Include="myFluorineFx\Messaging\Config\MsmqSettings.cs" />
+    <Compile Include="myFluorineFx\Messaging\Config\NetworkSettings.cs" />
+    <Compile Include="myFluorineFx\Messaging\Config\SecuritySettings.cs" />
+    <Compile Include="myFluorineFx\Messaging\Config\ServerSettings.cs" />
+    <Compile Include="myFluorineFx\Messaging\Config\ServiceConfigSettings.cs" />
+    <Compile Include="myFluorineFx\Messaging\Config\ServiceSettings.cs" />
+    <Compile Include="myFluorineFx\Messaging\Destination.cs" />
+    <Compile Include="myFluorineFx\Messaging\DotNetFactory.cs" />
+    <Compile Include="myFluorineFx\Messaging\DotNetFactoryInstance.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\AMFContext.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\AMFEndpoint.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\EndpointBase.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\AbstractFilter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\AuthenticationFilter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\CacheFilter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\DebugFilter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\DescribeServiceFilter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\DeserializationFilter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\FilterChain.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\IFilter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\MessageFilter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\ProcessFilter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\SerializationFilter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\ServiceMapFilter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\Filter\WsdlFilter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\IEndpoint.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\RemotingConnection.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\RtmpEndpoint.cs" />
+    <Compile Include="myFluorineFx\Messaging\Endpoints\RtmptEndpoint.cs" />
+    <Compile Include="myFluorineFx\Messaging\FactoryInstance.cs" />
+    <Compile Include="myFluorineFx\Messaging\GlobalScope.cs" />
+    <Compile Include="myFluorineFx\Messaging\IFlexFactory.cs" />
+    <Compile Include="myFluorineFx\Messaging\IMessageClientListener.cs" />
+    <Compile Include="myFluorineFx\Messaging\IMessageConnection.cs" />
+    <Compile Include="myFluorineFx\Messaging\MessageBase.cs" />
+    <Compile Include="myFluorineFx\Messaging\MessageBroker.cs" />
+    <Compile Include="myFluorineFx\Messaging\MessageClient.cs" />
+    <Compile Include="myFluorineFx\Messaging\MessageDestination.cs" />
+    <Compile Include="myFluorineFx\Messaging\MessageException.cs" />
+    <Compile Include="myFluorineFx\Messaging\MessageServer.cs" />
+    <Compile Include="myFluorineFx\Messaging\Messages\AcknowledgeMessage.cs" />
+    <Compile Include="myFluorineFx\Messaging\Messages\AsyncMessage.cs" />
+    <Compile Include="myFluorineFx\Messaging\Messages\BinaryMessage.cs" />
+    <Compile Include="myFluorineFx\Messaging\Messages\CommandMessage.cs" />
+    <Compile Include="myFluorineFx\Messaging\Messages\ErrorMessage.cs" />
+    <Compile Include="myFluorineFx\Messaging\Messages\IMessage.cs" />
+    <Compile Include="myFluorineFx\Messaging\Messages\MessageBase.cs" />
+    <Compile Include="myFluorineFx\Messaging\Messages\RemotingMessage.cs" />
+    <Compile Include="myFluorineFx\Messaging\PersistableAttributeStore.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\BaseRtmpHandler.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\CoreHandler.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\DeferredResult.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\AudioData.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\BaseEvent.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\BytesRead.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\ChunkSize.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\ClientBW.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\FlexInvoke.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\FlexStreamSend.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\Invoke.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\IRtmpEvent.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\Notify.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\Ping.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\ServerBW.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\Unknown.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Event\VideoData.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\IRtmpHandler.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpChannel.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpConnection.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpConstants.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpContext.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpHandler.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpHeader.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpNetworkStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpPacket.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpProtocolDecoder.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpProtocolEncoder.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpQueuedWriteStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpReader.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpServer.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpServerConnection.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpSocketListener.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\RtmpWriter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\ScopeContext.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\ScopeResolver.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\ScopeUtils.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Service\Call.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Service\IServiceResolver.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Service\PendingCall.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Service\ServiceInvoker.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\SO\ISharedObjectEvent.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\SO\ISharedObjectMessage.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\SO\SharedObjectEvent.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\SO\SharedObjectMessage.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\StatusASO.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\AbstractClientStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\AbstractStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\BroadcastScope.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\ClientBroadcastStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\ConsumerService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\DefaultStreamFilenameGenerator.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\DummyBWControlService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\IBroadcastScope.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\IBWControlContext.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\IBWControlService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\IConsumerService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\IFrameDropper.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\IProviderService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\ISeekableProvider.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\IStreamData.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\IStreamTypeAwareProvider.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\ITokenBucket.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\OutputStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\PlaylistSubscriberStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\ProviderService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\ServerStream.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\SimpleBWControlService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\SimplePlaylistController.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\StreamNotFoundException.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\StreamService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\StreamTracker.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\StreamUtils.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\VideoCodecFactory.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\Stream\VideoFrameDropper.cs" />
+    <Compile Include="myFluorineFx\Messaging\Rtmp\WebScope.cs" />
+    <Compile Include="myFluorineFx\Messaging\Scope.cs" />
+    <Compile Include="myFluorineFx\Messaging\ServiceException.cs" />
+    <Compile Include="myFluorineFx\Messaging\Services\AuthenticationService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Services\IService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Services\MessageService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Services\RemotingService.cs" />
+    <Compile Include="myFluorineFx\Messaging\Services\ServiceAdapter.cs" />
+    <Compile Include="myFluorineFx\Messaging\Services\ServiceBase.cs" />
+    <Compile Include="myFluorineFx\MethodHandler.cs" />
+    <Compile Include="myFluorineFx\Net\INetConnectionClient.cs" />
+    <Compile Include="myFluorineFx\Net\NetConnection.cs" />
+    <Compile Include="myFluorineFx\Net\NetStatusEventArgs.cs" />
+    <Compile Include="myFluorineFx\Net\RemoteSharedObject.cs" />
+    <Compile Include="myFluorineFx\Net\RemotingClient.cs" />
+    <Compile Include="myFluorineFx\Net\RtmpClient.cs" />
+    <Compile Include="myFluorineFx\Net\RtmpClientConnection.cs" />
+    <Compile Include="myFluorineFx\ObjectFactory.cs" />
+    <Compile Include="myFluorineFx\Security\GenericLoginCommand.cs" />
+    <Compile Include="myFluorineFx\Security\ILoginCommand.cs" />
+    <Compile Include="myFluorineFx\TypeHelper.cs" />
+    <Compile Include="myFluorineFx\Util\AsyncResultNoResult.cs" />
+    <Compile Include="myFluorineFx\Util\AtomicInteger.cs" />
+    <Compile Include="myFluorineFx\Util\ByteBuffer.cs" />
+    <Compile Include="myFluorineFx\Util\DisposableBase.cs" />
+    <Compile Include="myFluorineFx\Util\ValidationUtils.cs" />
+    <Compile Include="myFluorineFx\__Res.cs" />
+    <Compile Include="NetConnectRTMP.cs" />
+    <Compile Include="main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RtmpS2C.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
